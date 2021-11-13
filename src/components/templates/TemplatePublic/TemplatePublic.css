@@ -1,0 +1,19 @@
+.template-public-container {
+  display: flex;
+}
+
+.template-public-background {
+  width: 80%;
+  max-width: 1280px;
+  height: 100vh;
+  background-image: url('../../../images/project-management-cover.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px;
+}
+
+.template-public-content {
+  flex: 1;
+  padding: 50px;
+}
