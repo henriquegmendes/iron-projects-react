@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -17,9 +18,8 @@ const MyProjects = () => {
 
   const getProjectsByTitle = async () => {
     try {
-      console.log('SEARCH TITLE VALUE --- ', searchTitle);
       const token = localStorage.getItem('token');
-      const foundProjects = await getProjects(searchTitle, token);
+      const foundProjects = await getProjects(searchTitle, token); // Se der algum erro com status DIFERENTE de 401, vai cair no catch abaixo
 
       setProjects(foundProjects);
     } catch (error) {
@@ -32,7 +32,6 @@ const MyProjects = () => {
   };
 
   useEffect(() => {
-    console.log('CHAMOU O USE EFFECT!!!!');
     getProjectsByTitle();
   }, [searchTitle]);
   // Chama a callback quando o componente termina de montar pela primeira vez
